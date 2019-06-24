@@ -1978,6 +1978,10 @@ footer .copy_write small {
 }
 
 .top_breadcrumbs ul li .bread_arrow {
+  padding: 0 10px;
+}
+
+.top_breadcrumbs ul li .bread_arrow {
   position: relative;
   display: inline-block;
   padding: 0 0 0 16px;

@@ -1685,6 +1685,7 @@ footer {
 
       .bread_arrow {
         @include arrow_type22($text_color, 5px, 1px);
+        padding: 0 10px;
       }
     }
   }
