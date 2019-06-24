@@ -7,11 +7,8 @@ $(function(){
 		//クリックされた.accordion2の中のp要素に隣接する.accordion2の中の.innerを開いたり閉じたりする。
 		$(this).next('.backnum_box01_item .inner').slideToggle();
     $(this).toggleClass("arrow_up");
+		$(this).toggleClass("ac");
     $(this).next("panel-head").slideToggle();
-
-		//クリックされた.accordion2の中のp要素以外の.accordion2の中のp要素に隣接する.accordion2の中の.innerを閉じる
-		$('.backnum_box01_item p').not($(this)).next('.backnum_box01_item .inner').slideUp();
-
 	});
 
 	// フォームトグル
