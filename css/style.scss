@@ -2850,6 +2850,31 @@ footer {
           }
         }
 
+        .postal_code_box {
+          display: inline-block;
+          vertical-align: bottom;
+          margin-top: 0.5vw;
+          padding-right: 8px;
+          &:before {
+            content: "〒";
+            font-size: 20px;
+          }
+        }
+
+        .form_postal_code {
+          display: inline-block;
+          width: 50%;
+          &:before {
+            content: "aaaa";
+          }
+          @media screen and (min-width:768px) {
+            width: 20%;
+            padding: 0.8vw 20px;
+            margin-top: 0;
+          }
+        }
+
+
         .cp_ipselect {
           overflow: hidden;
           width: 20%;

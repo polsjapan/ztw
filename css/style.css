@@ -3364,6 +3364,35 @@ footer .copy_write small {
   }
 }
 
+.im_box01 .im_box01_inner .im_form .form_item .postal_code_box {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-top: 0.5vw;
+  padding-right: 8px;
+}
+
+.im_box01 .im_box01_inner .im_form .form_item .postal_code_box:before {
+  content: "〒";
+  font-size: 20px;
+}
+
+.im_box01 .im_box01_inner .im_form .form_item .form_postal_code {
+  display: inline-block;
+  width: 50%;
+}
+
+.im_box01 .im_box01_inner .im_form .form_item .form_postal_code:before {
+  content: "aaaa";
+}
+
+@media screen and (min-width: 768px) {
+  .im_box01 .im_box01_inner .im_form .form_item .form_postal_code {
+    width: 20%;
+    padding: 0.8vw 20px;
+    margin-top: 0;
+  }
+}
+
 .im_box01 .im_box01_inner .im_form .form_item .cp_ipselect {
   overflow: hidden;
   width: 20%;
