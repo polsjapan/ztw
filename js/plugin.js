@@ -3,7 +3,6 @@ $(function(){
 
     //.accordion2の中のp要素がクリックされたら
 	$('.backnum_box01_item p').click(function(){
-
 		//クリックされた.accordion2の中のp要素に隣接する.accordion2の中の.innerを開いたり閉じたりする。
 		$(this).next('.backnum_box01_item .inner').slideToggle();
     $(this).toggleClass("arrow_up");
@@ -13,6 +12,7 @@ $(function(){
 
 	// フォームトグル
 	$('#show_form').on('click', function(){
+		$('.individual_member_inner').fadeOut();
 		$(".article_form").slideToggle("slow");
 	});
 });
