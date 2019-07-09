@@ -88,6 +88,7 @@ $(function() {
       modalResize();
       // モーダルコンテンツフェードイン
       $(modal).fadeIn('slow');
+			modalshow();
       // 「.modal-overlay」あるいは「.modal-close-each」をクリック
       $('.modal-overlay-each, .modal-close-each').off().click(function() {
         // モーダルコンテンツとオーバーレイをフェードアウト
@@ -121,6 +122,20 @@ $(function() {
           'top': y + 'px'
         });
       }
+
+			// モーダル内表示
+      function modalshow() {
+        // ウィンドウの横幅、高さを取得
+        var w = $(window).width();
+        // モーダルコンテンツの表示位置を取得
+        if (w >= 768) {
+          var x = 0;
+        }else {
+					$(modal).children('ul').children('li').css('display', 'block');
+        }
+      }
+
+			
     });
   });
 });

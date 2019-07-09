@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
  @import url(https://fonts.googleapis.com/css?family=Oswald);
 body {
 	margin: 0;
@@ -966,6 +966,9 @@ main {
  transform: rotate(45deg);
 }
 }
+}
+.backnum_article_no_border {
+  border: none;
 }
  .main_box08 {
  padding: 50px 0;
@@ -2378,6 +2381,43 @@ h3 {
 	font-weight: 500;
 	line-height: 180%;
 	color: #333;
+  ol {
+  counter-reset: number; /*数字をリセット*/
+  list-style-type: none !important; /*数字を一旦消す*/
+  padding: 0;
+
+   li {
+  position: relative;
+  line-height: 1.5em;
+  padding: 10px 10px 0px 30px;
+
+  &:before{
+    /* 以下数字をつける */
+    position: absolute;
+    counter-increment: number;
+    content: counter(number);
+    /*以下数字のデザイン変える*/
+    display:inline-block;
+    background: #333;
+    color: white;
+    font-family: 'Avenir','Arial Black','Arial',sans-serif;
+    font-weight:bold;
+    font-size: 13px;
+    border-radius: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    /*以下 上下中央寄せのため*/
+    top: 15%;
+    @media screen and (max-width: 736px) {
+      top: 10%;
+   }
+
+    }
+  }
+}
  .article_box03_item_left {
  width: 65%;
 }
@@ -3391,3 +3431,12 @@ ul.sitemap-list {
 }
 }
 /*# sourceMappingURL=style.css.map */
+.backnum_article_title_box {
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+    color: #5F6060;
+  }
+}
